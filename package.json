@@ -1,0 +1,35 @@
+{
+  "name": "bfx-facs-scheduler",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Bitfinex Scheduler Facility",
+  "author": {
+    "name": "prdn",
+    "email": "paolo@bitfinex.com"
+  },
+  "keywords": [
+    "bitfinex"
+  ],
+  "dependencies": {
+    "async": "^2.6.0",
+    "bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git",
+    "lodash": "^4.17.10",
+    "node-schedule": "^1.2.1"
+  },
+  "engine": {
+    "node": ">=6.0"
+  },
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitfinexcom/bfx-facs-scheduler.git"
+  },
+  "homepage": "https://github.com/bitfinexcom/bfx-facs-scheduler",
+  "maintainers": [
+    {
+      "name": "prdn",
+      "email": "paolo@bitfinex.com"
+    }
+  ]
+}
