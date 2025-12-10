@@ -1,6 +1,6 @@
 {
-  "name": "bfx-facs-scheduler",
-  "version": "0.0.1",
+  "name": "@bitfinex/bfx-facs-scheduler",
+  "version": "1.0.0",
   "private": false,
   "description": "Bitfinex Scheduler Facility",
   "author": {
@@ -15,8 +15,8 @@
     "lodash": "^4.17.21",
     "node-schedule": "2.0.0"
   },
-  "engine": {
-    "node": ">=6.0"
+  "engines": {
+    "node": ">=16.0"
   },
   "main": "index.js",
   "license": "Apache-2.0",
