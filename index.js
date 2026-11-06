@@ -1,6 +1,5 @@
 'use strict'
 
-const _ = require('lodash')
 const schedule = require('node-schedule')
 const Base = require('@bitfinex/bfx-facs-base')
 
@@ -29,7 +28,7 @@ class Scheduler extends Base {
   }
 
   _stop (cb) {
-    _.each(Array.from(this.mem.keys()), k => this.del(k))
+    for (const k of Array.from(this.mem.keys())) this.del(k)
     cb()
   }
 }

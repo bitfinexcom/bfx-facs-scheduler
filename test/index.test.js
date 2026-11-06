@@ -9,6 +9,8 @@ test('adds, removes, and stops scheduled jobs', function (t) {
   const fac = new Fac(caller, {}, {})
   const when = new Date(Date.now() + 60 * 60 * 1000)
 
+  t.teardown(() => fac.stop(() => {}))
+
   t.plan(7)
 
   fac.start((err) => {
