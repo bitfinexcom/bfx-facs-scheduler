@@ -1,6 +1,6 @@
 {
   "name": "@bitfinex/bfx-facs-scheduler",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": false,
   "description": "Bitfinex Scheduler Facility",
   "author": {
@@ -10,13 +10,23 @@
   "keywords": [
     "bitfinex"
   ],
+  "scripts": {
+    "test": "npm run lint && npm run unit",
+    "unit": "brittle-node test/**/*.spec.js",
+    "lint": "bfx-lint-js --jest",
+    "lint:fix": "bfx-lint-js --jest --fix"
+  },
   "dependencies": {
-    "@bitfinex/bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git",
-    "lodash": "^4.17.21",
-    "node-schedule": "2.0.0"
+    "@bitfinex/bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git#v2.0.0",
+    "lodash": "^4.18.1",
+    "node-schedule": "2.1.2"
+  },
+  "devDependencies": {
+    "@bitfinex/lint-js": "^1.1.0",
+    "brittle": "^4.5.0"
   },
   "engines": {
-    "node": ">=16.0"
+    "node": ">=22.0"
   },
   "main": "index.js",
   "license": "Apache-2.0",
