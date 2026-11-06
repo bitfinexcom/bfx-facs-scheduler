@@ -28,7 +28,9 @@ class Scheduler extends Base {
   }
 
   _stop (cb) {
-    for (const k of Array.from(this.mem.keys())) this.del(k)
+    for (const k of Array.from(this.mem.keys())) {
+      this.del(k)
+    }
     cb()
   }
 }
