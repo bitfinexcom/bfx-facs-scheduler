@@ -1,36 +1,36 @@
 'use strict'
 
-const _ = require('lodash')
 const schedule = require('node-schedule')
 const Base = require('@bitfinex/bfx-facs-base')
 
 class Scheduler extends Base {
-
-  constructor(caller, opts, ctx) {
+  constructor (caller, opts, ctx) {
     super(caller, opts, ctx)
-    
+
     this.name = 'scheduler'
 
     this.init()
   }
 
-  init() {
+  init () {
     this.mem = new Map()
   }
 
-  add(k, f, w) {
+  add (k, f, w) {
     this.mem.set(k, schedule.scheduleJob(w, f))
   }
 
-  del(k) {
+  del (k) {
     const s = this.mem.get(k)
     if (!s) return
     s.cancel()
     this.mem.delete(k)
   }
 
-  _stop(cb) {
-    _.each(Array.from(this.mem.keys()), k => this.del(k))
+  _stop (cb) {
+    for (const k of Array.from(this.mem.keys())) {
+      this.del(k)
+    }
     cb()
   }
 }
